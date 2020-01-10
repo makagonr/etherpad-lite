@@ -8,7 +8,7 @@ FROM node:10-buster-slim
 LABEL maintainer="Etherpad team, https://github.com/ether/etherpad-lite"
 
 # mysql client is for check and create the database
-RUN apt-get update && apt-get install -y mysql-client
+RUN apt-get update && apt-get install -y default-mysql-client
 
 # plugins to install while building the container. By default no plugins are
 # installed.
