@@ -7,6 +7,9 @@
 FROM node:10-buster-slim
 LABEL maintainer="Etherpad team, https://github.com/ether/etherpad-lite"
 
+# mysql client is for check and create the database
+RUN apt-get update && apt-get install -y mysql-client
+
 # plugins to install while building the container. By default no plugins are
 # installed.
 # If given a value, it has to be a space-separated, quoted list of plugin names.
@@ -44,7 +47,8 @@ RUN bin/installDeps.sh && \
 RUN for PLUGIN_NAME in ${ETHERPAD_PLUGINS}; do npm install "${PLUGIN_NAME}"; done
 
 # Copy the configuration file.
-COPY --chown=etherpad:etherpad ./settings.json.docker /opt/etherpad-lite/settings.json
+COPY --chown=etherpad:etherpad ./settings.json.docker ./settings.json
 
 EXPOSE 9001
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["node", "node_modules/ep_etherpad-lite/node/server.js"]
