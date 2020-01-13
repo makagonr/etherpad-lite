@@ -162,11 +162,11 @@
   "padOptions": {
     "noColors":         false,
     "showControls":     true,
-    "showChat":         true,
+    "showChat":         false,
     "showLineNumbers":  true,
     "useMonospaceFont": false,
-    "userName":         false,
-    "userColor":        false,
+    "userName":         true,
+    "userColor":        true,
     "rtl":              false,
     "alwaysShowChat":   false,
     "chatAndUsers":     false,
@@ -177,9 +177,6 @@
    * Pad Shortcut Keys
    */
   "padShortcutEnabled" : {
-    "altF9":     true, /* focus on the File Menu and/or editbar */
-    "altC":      true, /* focus on the Chat window */
-    "cmdShift2": true, /* shows a gritter popup showing a line author */
     "delete":    true,
     "return":    true,
     "esc":       true, /* in mozilla versions 14-19 avoid reconnecting pad */
@@ -187,15 +184,6 @@
     "tab":       true, /* indent */
     "cmdZ":      true, /* undo/redo */
     "cmdY":      true, /* redo */
-    "cmdI":      true, /* italic */
-    "cmdB":      true, /* bold */
-    "cmdU":      true, /* underline */
-    "cmd5":      true, /* strike through */
-    "cmdShiftL": true, /* unordered list */
-    "cmdShiftN": true, /* ordered list */
-    "cmdShift1": true, /* ordered list */
-    "cmdShiftC": true, /* clear authorship */
-    "cmdH":      true, /* backspace */
     "ctrlHome":  true, /* scroll to top of pad */
     "pageUp":    true,
     "pageDown":  true
@@ -403,24 +391,21 @@
    * Uncomment to customize.
    */
 
-  /*
+
   "toolbar": {
     "left": [
-      ["bold", "italic", "underline", "strikethrough"],
-      ["orderedlist", "unorderedlist", "indent", "outdent"],
-      ["undo", "redo"],
-      ["clearauthorship"]
+      ["undo", "redo"]
     ],
     "right": [
-      ["importexport", "timeslider", "savedrevision"],
-      ["settings", "embed"],
+      ["timeslider", "savedrevision"],
+      ["settings"],
       ["showusers"]
     ],
     "timeslider": [
-      ["timeslider_export", "timeslider_returnToPad"]
+      ["timeslider_returnToPad"]
     ]
   },
-  */
+
 
   /*
    * Expose Etherpad version in the web interface and in the Server http header.
