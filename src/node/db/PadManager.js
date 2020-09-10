@@ -126,10 +126,6 @@ exports.getPad = async function(id, text)
       throw new customError("text is not a string", "apierror");
     }
 
-    // check if text is less than 100k chars
-    if (text.length > 100000) {
-      throw new customError("text must be less than 100k chars", "apierror");
-    }
   }
 
   let pad = globalPads.get(id);
