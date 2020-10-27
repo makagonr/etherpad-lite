@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y default-mysql-client
 #
 # EXAMPLE:
 #   ETHERPAD_PLUGINS="ep_codepad ep_author_neat"
-ARG ETHERPAD_PLUGINS="ep_author_neat"
+ARG ETHERPAD_PLUGINS="ep_codepad ep_author_neat"
 
 # Set the following to production to avoid installing devDeps
 # this can be done with build args (and is mandatory to build ARM version)
