@@ -112,13 +112,10 @@
    * that the Etherpad server can access them
    */
 
-  /*
   "ssl" : {
-            "key"  : "/path-to-your/epl-server.key",
-            "cert" : "/path-to-your/epl-server.crt",
-            "ca": ["/path-to-your/epl-intermediate-cert1.crt", "/path-to-your/epl-intermediate-cert2.crt"]
+            "key"  : "${SSL_KEY_PATH}",
+            "cert" : "${SSL_CERT_PATH}",
           },
-  */
 
   /*
    * The type of the database.
